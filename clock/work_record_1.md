@@ -16,19 +16,11 @@ https://blog.csdn.net/NNNNNNNNNNNNY/article/details/50203223
 ## about visual studio
 ### 无法解析的外部符号
 #### 错误显示
-<<<<<<< HEAD
 ![vs_error1](work_record_pic/vs_error1.png)
 #### 解决方法
 可以看到是因为opencv的库出现了问题，可以参考一下步骤解决：<br>1.下载opencv3.4.0。<br>2.在“项目名”——属性——VC++目录——包含目录和库目录中分别加入opencv安装包中的include目录和lib目录<br>3.在“项目名”——属性——链接器——输入——附加依赖项添加lib文件名称（opencv_world340.lib;opencv_world340d.lib;）<br>注意：2和3中release和debug要分别配置。<br>4.另外记得把opencv的dll加入环境变量。
 ## 关于内存释放
 string是不需要释放的
-=======
-![vs_error1](https://i.imgur.com/9qnSeHw.png)
-#### 解决方法
-可以看到是因为opencv的库出现了问题，可以参考一下步骤解决：<br>1.下载opencv3.4.0。<br>2.在“项目名”——属性——VC++目录——包含目录和库目录中分别加入opencv安装包中的include目录和lib目录<br>3.在“项目名”——属性——链接器——输入——附加依赖项添加lib文件名称（opencv_world340.lib;opencv_world340d.lib;）<br>注意：2和3中release和debug要分别配置。<br>4.另外记得把opencv的dll加入环境变量。
-## 关于内存释放
-string 是不需要释放的
->>>>>>> 5046d0274faec6067b73e8c233d5a544c66aaf32
 ## clock项目进行
 ### resize时需要考虑的问题
 1.resize到160*160<br>
@@ -37,8 +29,4 @@ string 是不需要释放的
 ### gray时需要考虑的问题
 1.如果本来就是gray图像的处理
 ### 二值化处理
-<<<<<<< HEAD
 1.原来的二值化函数不能用，要对图像进行二值化
-=======
-1.原来的二值化函数不能用，要对图像进行二值化
->>>>>>> 5046d0274faec6067b73e8c233d5a544c66aaf32
