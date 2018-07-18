@@ -45,8 +45,8 @@ https://blog.csdn.net/NNNNNNNNNNNNY/article/details/50203223
 ### 5.7.存在的一些原理性问题
 1.画钟实验是给患者说一句话，让其画钟，然后得到轮廓，指针，数字完备度三方面的打分。但是事实上存在很多问题，比如轮廓为什么不可以是方的，指针要不要画秒针，数字的完备度是否能体现其操作能力等等。<br>
 2.如果通过综合性的方法，如7.12组会提出的给出一个标准去训练的方式，可能在具体实践中也需要去给出一个标准，然后去衡量患者画钟的结果，否则这种训练会让标准固化，得分僵化。<br><br><br>
-#clock7
-##关于项目的备注
+# clock7
+## 1.关于项目的备注
 
 ```
 conda info -e  看所有conda安装的环境<br>
@@ -54,4 +54,9 @@ source activate clock   激活clock环境<br>
 python predict.py   运行代码<br>
 python clock1.py   运行训练代码<br>
 ```
+
+# 量表的实现
+## 1.关于class
+class了解：https://blog.csdn.net/dfdfdsfdfdfdf/article/details/52439651
+
 
