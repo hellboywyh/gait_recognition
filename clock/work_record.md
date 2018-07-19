@@ -59,7 +59,7 @@ python clock1.py   运行训练代码<br>
 ## 1.关于class
 class了解：https://blog.csdn.net/dfdfdsfdfdfdf/article/details/52439651
 ## 2.量表实现功能
-###2.1 对于当前单个量表
+### 2.1 对于当前单个量表
 1.多个问题<br>（已实现）
 2.得分计算<br>（已实现）
 3.选项自动翻页<br>（已实现）
