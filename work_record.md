@@ -7,4 +7,4 @@
 * 看自然语言处理的一些东西，了解什么叫词向量等。
 ## clock class封装
 >参考：https://blog.csdn.net/dfdfdsfdfdfdf/article/details/52439651
-
+>>vector作为参数的三种传参方式：https://www.cnblogs.com/xiaoxi666/p/6843211.html
