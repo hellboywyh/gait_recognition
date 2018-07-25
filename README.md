@@ -14,3 +14,6 @@ https://my.oschina.net/bxxfighting/blog/378196<br>
 `git commit -m "这里写下你自己的记录本次提交内容的信息"`<br>
 4.推送到远程仓库<br>
 `git push git@github.com:luckyqsz/BCRC-ASAGroup.git`<br>
+
+## 学习资料
+[李飞飞、吴恩达、Bengio等人的15大顶级深度学习课程](https://blog.csdn.net/dQCFKyQDXYm3F8rB0/article/details/79136408)
