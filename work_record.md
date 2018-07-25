@@ -28,6 +28,13 @@
 但是经过对比，两脚踝的灰度并没有很大差别，所以利用深度摄像头侧面信息获得步宽信息的可行性有待考量。
 ![脚踝深度之差理论](work_record/gait_depth_theory.png)
 ![脚踝深度之差实际](work_record/gait_depth.png)
+可能原因:<br>
+a) 摄像头精度问题（实验排除）
+b) gray to bgr和bgr to gray的可逆性问题
+c) 16UINT-8UINT的精度损失
+d）视频中人走路太快
+摄像头问题:<br>
+a) 黑色对识别有影响
 
 * 更多更稳定的视频的拍摄
 * 尝试正面识别
