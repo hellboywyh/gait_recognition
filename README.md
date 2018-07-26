@@ -21,10 +21,10 @@ https://my.oschina.net/bxxfighting/blog/378196<br>
  >take note of the authors and their institutional affiliations.<br>
  >take note of the journal in which it’s published.<br>
  >1.Begin by reading the introduction, not the abstract.<br>
-  2. Identify the big question.<br>
-  3. Summarize the background in five sentences or less.<br>
-  4. Identify the specific question(s).<br>
-  5. Identify the approach.<br>
+>2. Identify the big question.<br>
+3. Summarize the background in five sentences or less.<br>
+4. Identify the specific question(s).<br>
+5. Identify the approach.<br>
   6. Read the methods section.(Draw a diagram for each experiment)<br>
   7. Read the results section.<br>
   8. Determine whether the results answer the specific question(s).<br>
