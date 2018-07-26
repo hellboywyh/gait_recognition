@@ -19,8 +19,8 @@ https://my.oschina.net/bxxfighting/blog/378196<br>
 [李飞飞、吴恩达、Bengio等人的15大顶级深度学习课程](https://blog.csdn.net/dQCFKyQDXYm3F8rB0/article/details/79136408)
 [how to read a paper]（https://www.huffingtonpost.com/jennifer-raff/how-to-read-and-understand-a-scientific-paper_b_5501628.html）
  >take note of the authors and their institutional affiliations.<br>
-  take note of the journal in which it’s published.<br>
-  1.Begin by reading the introduction, not the abstract.<br>
+ >take note of the journal in which it’s published.<br>
+ >1.Begin by reading the introduction, not the abstract.<br>
   2. Identify the big question.<br>
   3. Summarize the background in five sentences or less.<br>
   4. Identify the specific question(s).<br>
