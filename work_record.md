@@ -29,12 +29,12 @@
 ![脚踝深度之差理论](work_record/gait_depth_theory.png)
 ![脚踝深度之差实际](work_record/gait_depth.png)
 可能原因:<br>
-a) 摄像头精度问题（实验排除）
-b) gray to bgr和bgr to gray的可逆性问题
-c) 16UINT-8UINT的精度损失
-d）视频中人走路太快
-摄像头问题:<br>
-a) 黑色对识别有影响
+a) 摄像头精度问题（实验排除）<br>
+b) gray to bgr和bgr to gray的可逆性问题<br>
+c) 16UINT-8UINT的精度损失<br>
+d）视频中人走路太快<br>
+摄像头存疑问题:<br>
+a) 黑色对识别有影响<br>
 
 * 更多更稳定的视频的拍摄
 * 尝试正面识别
@@ -42,6 +42,9 @@ a) 黑色对识别有影响
 ### 深度视频的应用
 
 ## 自然语言处理
+### 基于的想法
+传统：文字->向量
+创新：拼音->向量
 ### 词嵌入、词向量（word embedding、word vector）
 参考：[词嵌入](https://blog.csdn.net/ch1209498273/article/details/78323478)<br>
 词嵌入是将词汇映射到实数向量的方法总称。将文本X{x1,x2,x3,x4,x5……xn}映射到多维向量空间Y{y1,y2,y3,y4,y5……yn }，这个映射的过程就叫做词嵌入。  
@@ -70,8 +73,17 @@ LSA全称Latent semantic analysis，中文意思是隐含语义分析。<br>
 #### 数据库
 >MIT Media lab Speech Dataset（麻省理工学院媒体实验室语音数据集）<br>Pitch and Voicing Estimates for Aurora 2(Aurora2语音库的基因周期和声调估计）<br>Congressional speech data（国会语音数据）<br>Mandarin Speech Frame Data（普通话语音帧数据）<br>用于测试盲源分离算法的语音数据<br>
 #### 隐式马尔科夫模型（HMM）
-
-
+#### 语音信号处理
+（1）时域分析：短时能量、短时平均幅度、短时过零率进行语音端点检测<br>
+（2）端点检测：双门限起点检测算法 
+#### CNN 在语音识别中的应用
+[CNN 在语音识别中的应用](https://www.cnblogs.com/qcloud1001/p/7941158.html?utm_source=debugrun&utm_medium=referral)
+（1）CLDNN：（CONVOLUTIONAL, LONG SHORT-TERM MEMORY,FULLY CONNECTED DEEP NEURAL NETWORKS）<br>
+特征向量用的是40维的log梅尔特征。<br>
+[梅尔特征](https://blog.csdn.net/xmdxcsj/article/details/51228791)
+>MFCC(Mel-Frequency Cepstral Coefficients)：转化到梅尔频率，然后进行倒谱分析。梅尔刻度的滤波器组在**低频部分的分辨率高**，跟人耳的听觉特性是相符的，这也是梅尔刻度的物理意义所在。倒谱的含义是：对时域信号做傅里叶变换，然后取log，然后再进行反傅里叶变换。可以分为复倒谱、实倒谱和功率倒谱，我们用的是功率倒谱。频谱的峰值即为共振峰，它决定了信号频域的包络，是辨别声音的重要信息，所以进行倒谱分析目的就是获得频谱的**包络信息**。
+（2）deep CNN:
+GMM-HMM——>DNN-HMM
 ### 论言语发音与感知的互动机制
 #### 发音器官和听音器官频率声能互补
 #### 低频敏感区与元音格局
