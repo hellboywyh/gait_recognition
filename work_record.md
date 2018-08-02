@@ -1,3 +1,7 @@
+---
+typora-root-url: work_record
+---
+
 # 20180727-20180802
 ## 周待做列表
 * 更多更稳定视频的拍摄和前处理；
@@ -7,12 +11,87 @@
 * 尝试得到转身步数。
 * 搭建系统
 
+### 步宽
 
+* 摄像头精度：正常，至少能达到厘米量级
 
+* opencv 的grayToBgr和BgrToGray函数转换可逆，并且opencv可以直接输出灰度视频
 
+* 步宽测量不准确的主要原因在于关键点识别不准确
 
+  * 尝试将关键点识别有效域扩大为11*11，阈值提高为50，downsampling倍数降为2，无效
+  * 降低需求，延续上述操作，并且使用转身前所有帧左右脚深度平均值之差代替步宽，8个视频16组数据中2组无效。但是这种方法依赖于转身帧数测量的准确度。
 
+* 步宽和深度对应关系：看SDK源代码得到**gray_pixel*10000/255mm**
 
+  > [OpenNI2编程说明](http://blog.sina.com.cn/s/blog_4a628f030102v6k4.html)
+  >
+  > [CvMat，Mat和IplImage之间的转化和拷贝](https://www.cnblogs.com/Key-Ky/p/4150531.html)
+
+* 
+
+### 关键点识别精度
+
+* 暂时无解
+
+### 轮廓识别精度
+
+* 轮廓识别精度好像会受到光照条件的影响，受到背景颜色的影响
+
+* 调研opencv动态物体捕捉算法，尝试运用背景差法，帧差法，背景帧差法效果远好于帧差法，所以决定**在视频采集模块中加入背景帧采集按钮（增加了对操作者的要求）**，后期如果需求无法去除的话可以在实际系统中的上一步操作按钮中集成背景帧采集按钮。
+
+  * 如果椅子固定不动，还可以摆脱椅子对轮廓识别的干扰
+  * 背景帧直接输入视频第一帧
+  * 成功
+  * 遇到的问题：
+    - 因为是通过帧像素点差，所以如果颜色比较接近，则容易产生问题，如实验中的腿和地板颜色接近带来的问题
+    - 虽然背景帧没有问题，但是人的影子投射到墙上仍然会对实验产生影响
+
+* 尝试将上述视频换为**深度视频**处理
+
+  + 优点:
+    + 除去了颜色对图像处理的影响
+
+  + 缺点:
+
+    + 墙角处噪点太重，刚好在人脚的部分------去除高斯滤波和形态学膨胀，取diff的最大contours
+    + 人脚和地面接触部分的深度变化不大------将diff二值化处理的阈值降为10（39.2cm）（不能高于25.5（100cm））------**要求病人和背景墙之间距离大于此阈值**
+    + 两个视频同时处理，降低处理速度-----**将步宽处理整合到主处理程序中（需要一段时间，暂放）**
+* 效果图 
+
+| color_contour | depth_contour |
+|:---------|:--------------------|
+| ![color_contour](..\work_record\color_coutour.gif) | ![depth_contour](../work_record/depth_contour.gif) |
+| shadow，color | no feet |
+
+​    
+
+### clock代码编译dll
+
+* [python调用C语言](https://www.cnblogs.com/lovephysics/p/7237227.html)
+
+* [python使用ctypes调用C/C++](https://blog.csdn.net/u012449363/article/details/75452374)
+
+  -----------------发现思路跑偏---------------------
+
+### clock在linux下运行
+
+* [windows和linux下文件和文件夹互传](https://blog.csdn.net/jiandanokok/article/details/51387922)
+* [linux下使用g++编译cpp工程](https://www.cnblogs.com/battlescars/p/cpp_linux_gcc.html)（实战）
+* [gcc/g++编译的四个步骤](https://www.cnblogs.com/zjiaxing/p/5557549.html)（理解）
+* [makefile的使用](https://blog.csdn.net/tototuzuoquan/article/details/38459119)
+* [gcc/g++动静态库编写](http://www.cnblogs.com/zjiaxing/p/5557629.html)
+* 其他
+  * [vi命令](http://man.linuxde.net/vi)
+  * [ubuntu16.04配置VNC远程桌面连接](https://www.cnblogs.com/EasonJim/p/7529156.html)
+  * 
+* 目前难点：
+  * clock代码中用到了opencv的imgproc.hpp库函数，但是linux版本的opencv中没有imgproc库函数，将windows版本的库函数导入出错，卡住ing……
+  * 尝试在服务器安装opencv，需要管理员权限，卡住……（创建环境，安装opencv）
+  * 在anconda下创建环境安装了opencv，但是还是没用
+* 失败可能原因分析：
+  + 
+* 打算用步态服务器sudo权限做
 
 
 # 20180720-20180726
