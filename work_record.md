@@ -2,7 +2,27 @@
 typora-root-url: work_record
 ---
 
+# 20180803-20180809
+
+## 周待做列表
+
+* 目前整个系统已经基本跑通，接下来还需要做一些细化的事情
+* 优化画钟识别的代码
+  * 能处理拍摄的彩色图片
+  * 批量处理功能去除
+  * 目前的resize是直接截取中间部分
+  * 受光线影响
+* 优化步态识别的代码
+  * 先把深度视频用起来
+  * 和乔莎老师商量一下要不要用王承斌的代码（处理速度会受到限制）
+  * 
+
+
+
+
+
 # 20180727-20180802
+
 ## 周待做列表
 * 更多更稳定视频的拍摄和前处理；
 * 步宽检测失败原因排查；
@@ -84,14 +104,16 @@ typora-root-url: work_record
 * 其他
   * [vi命令](http://man.linuxde.net/vi)
   * [ubuntu16.04配置VNC远程桌面连接](https://www.cnblogs.com/EasonJim/p/7529156.html)
-  * 
+  * [opencv安装](https://blog.csdn.net/cocoaqin/article/details/78163171)
+  * [python调用c++可执行程序并传入参数](https://blog.csdn.net/caobin0825/article/details/79657401)
 * 目前难点：
   * clock代码中用到了opencv的imgproc.hpp库函数，但是linux版本的opencv中没有imgproc库函数，将windows版本的库函数导入出错，卡住ing……
   * 尝试在服务器安装opencv，需要管理员权限，卡住……（创建环境，安装opencv）
   * 在anconda下创建环境安装了opencv，但是还是没用
-* 失败可能原因分析：
-  + 
-* 打算用步态服务器sudo权限做
+* 用codeblocks IDE运行，成功
+* 总结
+  * opencv库函数包含特别复杂，用opencv的一个头函数可能需要好几个库的支持，所以用的时候可以直接把OpenCV的所有库丢进去
+  * opencv的库函数头文件路径设置为环境变量总是不成功，暂时还不知道为啥
 
 
 # 20180720-20180726
