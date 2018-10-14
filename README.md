@@ -2,6 +2,7 @@
 ## 关于文档的编辑   
 https://blog.csdn.net/liu537192/article/details/45693529<br>
 https://www.cnblogs.com/guchunli/p/6371040.html<br>
+图片插入（超级详细）：https://blog.csdn.net/geekleee/article/details/73018194
 ## 关于本地文档的提交      
 https://my.oschina.net/bxxfighting/blog/378196<br>
 ### 常用命令  
