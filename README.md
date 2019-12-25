@@ -1,3 +1,7 @@
+===========
+关于画钟方面的一些信息
+============
+
 # gait_recognition
 ## 关于文档的编辑   
 https://blog.csdn.net/liu537192/article/details/45693529<br>
